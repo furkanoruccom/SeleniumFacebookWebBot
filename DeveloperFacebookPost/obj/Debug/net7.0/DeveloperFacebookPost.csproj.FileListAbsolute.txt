@@ -1,0 +1,17 @@
+D:\PublicProject\DeveloperFacebookPost\bin\Debug\net7.0\DeveloperFacebookPost.exe
+D:\PublicProject\DeveloperFacebookPost\bin\Debug\net7.0\DeveloperFacebookPost.deps.json
+D:\PublicProject\DeveloperFacebookPost\bin\Debug\net7.0\DeveloperFacebookPost.runtimeconfig.json
+D:\PublicProject\DeveloperFacebookPost\bin\Debug\net7.0\DeveloperFacebookPost.dll
+D:\PublicProject\DeveloperFacebookPost\bin\Debug\net7.0\DeveloperFacebookPost.pdb
+D:\PublicProject\DeveloperFacebookPost\bin\Debug\net7.0\Facebook.dll
+D:\PublicProject\DeveloperFacebookPost\obj\Debug\net7.0\DeveloperFacebookPost.csproj.AssemblyReference.cache
+D:\PublicProject\DeveloperFacebookPost\obj\Debug\net7.0\DeveloperFacebookPost.GeneratedMSBuildEditorConfig.editorconfig
+D:\PublicProject\DeveloperFacebookPost\obj\Debug\net7.0\DeveloperFacebookPost.AssemblyInfoInputs.cache
+D:\PublicProject\DeveloperFacebookPost\obj\Debug\net7.0\DeveloperFacebookPost.AssemblyInfo.cs
+D:\PublicProject\DeveloperFacebookPost\obj\Debug\net7.0\DeveloperFacebookPost.csproj.CoreCompileInputs.cache
+D:\PublicProject\DeveloperFacebookPost\obj\Debug\net7.0\DeveloperFacebookPost.csproj.CopyComplete
+D:\PublicProject\DeveloperFacebookPost\obj\Debug\net7.0\DeveloperFacebookPost.dll
+D:\PublicProject\DeveloperFacebookPost\obj\Debug\net7.0\refint\DeveloperFacebookPost.dll
+D:\PublicProject\DeveloperFacebookPost\obj\Debug\net7.0\DeveloperFacebookPost.pdb
+D:\PublicProject\DeveloperFacebookPost\obj\Debug\net7.0\DeveloperFacebookPost.genruntimeconfig.cache
+D:\PublicProject\DeveloperFacebookPost\obj\Debug\net7.0\ref\DeveloperFacebookPost.dll

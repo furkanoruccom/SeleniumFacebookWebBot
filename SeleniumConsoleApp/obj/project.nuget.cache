@@ -1,15 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "Mcevlic3Ks2tVEfSxHLFOr6EFRZ4Hi9gX8oKJQv9JXO7HuxBwrXiQtwd2C1zGrWL7/TkpEKl+kE/PTtpmPPKDg==",
+  "dgSpecHash": "aGM6I56EwZtceG2BdUIpJPB4ziuwsnded0vaFt50wFsvIFYFknFrYE4ZyPuHDIS9cCUijvTC3L7Fc9YbKmhtZA==",
   "success": true,
-  "projectFilePath": "D:\\SeleniumConsoleApp\\SeleniumConsoleApp\\SeleniumConsoleApp.csproj",
+  "projectFilePath": "D:\\PublicProject\\SeleniumConsoleApp\\SeleniumConsoleApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\facebook\\7.0.6\\facebook.7.0.6.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\selenium.support\\4.13.1\\selenium.support.4.13.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\selenium.webdriver\\4.13.1\\selenium.webdriver.4.13.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Facebook 7.0.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Facebook",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }
