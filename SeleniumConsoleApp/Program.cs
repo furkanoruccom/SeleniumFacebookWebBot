@@ -4,14 +4,23 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
+using SixLabors.ImageSharp.Formats.Jpeg;
+using TextCopy;
+using System.Drawing;
+using System.Security.Permissions;
 
 namespace WebBotExample
 {
     class Program
     {
 
-
+        [STAThread]
         static void Main(string[] args)
+        {
+            RunAsync().GetAwaiter().GetResult();
+        }
+
+        static async Task RunAsync()
         {
 
             ChromeOptions options = new ChromeOptions();
@@ -20,7 +29,42 @@ namespace WebBotExample
 
             using (IWebDriver driver = new ChromeDriver())
             {
+                driver.Navigate().GoToUrl("https://furkanoruc.com/assets/img/avatar-1.jpg");
 
+                // Resmi bul ve URL'sini al.
+                IWebElement image = driver.FindElement(By.TagName("img"));
+                string imageUrl = image.GetAttribute("src");
+
+                System.Drawing.Image downloadedImage;
+                using (HttpClient client = new HttpClient())
+                {
+                    byte[] imageData = await client.GetByteArrayAsync(imageUrl);
+                    using (System.IO.MemoryStream ms = new System.IO.MemoryStream(imageData))
+                    {
+                        downloadedImage = System.Drawing.Image.FromStream(ms);
+                    }
+                }
+
+
+                // STA iş parçacığı üzerinde Clipboard işlemini çalıştır
+                Thread clipboardThread = new Thread(() =>
+                {
+                    System.Windows.Forms.Clipboard.SetImage(downloadedImage);
+                });
+                clipboardThread.SetApartmentState(ApartmentState.STA);
+                clipboardThread.Start();
+                clipboardThread.Join();
+
+
+
+
+
+
+
+
+
+
+                #region facebook a giriş yap
                 driver.Navigate().GoToUrl("https://www.facebook.com/");
 
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
@@ -36,36 +80,44 @@ namespace WebBotExample
 
                 System.Threading.Thread.Sleep(5000);
                 driver.Navigate().GoToUrl("https://www.facebook.com/thefurkanoruc/posts/1913940275667135:1913940275667135");
+                #endregion
 
 
 
+                wait.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete")); // sayfanın yüklenmesini bekle
 
-                wait.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
 
-
+                #region Elementin sayfada olup olmadığı kontrol
                 IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-
-
-                // Elementin sayfada olup olmadığı kontrol
                 wait.Until(ExpectedConditions.ElementExists(By.CssSelector("form.x1ed109x div.xzsf02u")));
                 wait.Until(ExpectedConditions.ElementExists(By.CssSelector("form.x1ed109x")));
                 wait.Until(ExpectedConditions.ElementExists(By.CssSelector("form.x1ed109x p.xdj266r")));
+                #endregion
 
                 js.ExecuteScript("document.querySelector('form.x1ed109x div.xzsf02u').focus();");
                 js.ExecuteScript("document.querySelector('form.x1ed109x').click();");
-
                 IWebElement textElement = wait.Until(ExpectedConditions.ElementExists(By.CssSelector("form.x1ed109x p.xdj266r")));
-                textElement.SendKeys("Yörük Travel" + " "+
-                    "https://img.freepik.com/free-photo/full-shot-travel-concept-with-landmarks_23-2149153258.jpg?3&w=1060&t=st=1696840426~exp=1696841026~hmac=f5d7d7a8e3e1b12e0308ab80e0d18a1b1baad92fc1653ec341c53d9ca957068c");
 
-                //"https://www.youtube.com/watch?time_continue=2&v=B2CAprs8Mnw"
+
+
+
+
+
+
+                textElement.SendKeys("Furkan Oruç yeni deneme");
+
+                textElement.SendKeys(Keys.Control + "v");
+
+
+
+
+
 
 
                 js.ExecuteScript("document.querySelector('form.x1ed109x .x9f619.x1n2onr6.x1ja2u2z.x78zum5.xdt5ytf.x2lah0s.x193iq5w.xeuugli.xsyo7zv.x16hj40l.x10b6aqq.x1yrsyyn:nth-child(2) .x1ey2m1c').click()");
 
 
-                //IWebElement formElement2 = WaitUntilElementVisible(driver, By.CssSelector("form.x1ed109x "), 10);
-                //formElement2.Submit();
+
 
                 System.Threading.Thread.Sleep(11115000);
                 driver.Quit();
@@ -82,5 +134,8 @@ namespace WebBotExample
             return driver.FindElement(itemSpecifier);
         }
 
+
     }
+
+
 }

@@ -1,27 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "aGM6I56EwZtceG2BdUIpJPB4ziuwsnded0vaFt50wFsvIFYFknFrYE4ZyPuHDIS9cCUijvTC3L7Fc9YbKmhtZA==",
+  "dgSpecHash": "CJcZXHZ+k9AFFS/GqtZqRaXGQ001uJar5sITN4+y/yD/9tJ+oCYjyOg+kzWeHYgBtp4hYiRxWuM3fheN3FLARA==",
   "success": true,
-  "projectFilePath": "D:\\PublicProject\\SeleniumConsoleApp\\SeleniumConsoleApp.csproj",
+  "projectFilePath": "D:\\PublicProject\\SeleniumFacebookWebBot\\SeleniumConsoleApp\\SeleniumConsoleApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\facebook\\7.0.6\\facebook.7.0.6.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\selenium.support\\4.13.1\\selenium.support.4.13.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\selenium.webdriver\\4.13.1\\selenium.webdriver.4.13.1.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
+    "C:\\Users\\DELL\\.nuget\\packages\\sixlabors.fonts\\2.0.0\\sixlabors.fonts.2.0.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\sixlabors.imagesharp\\3.0.2\\sixlabors.imagesharp.3.0.2.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\sixlabors.imagesharp.drawing\\2.0.0\\sixlabors.imagesharp.drawing.2.0.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\textcopy\\6.2.1\\textcopy.6.2.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Facebook 7.0.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Facebook",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    }
-  ]
+  "logs": []
 }
