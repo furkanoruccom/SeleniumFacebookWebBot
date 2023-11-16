@@ -11,6 +11,7 @@ using System.Security.Permissions;
 
 namespace WebBotExample
 {
+    // Furkan Oruç | furkanoruc.com | 2023
     class Program
     {
 
@@ -19,6 +20,8 @@ namespace WebBotExample
         {
             RunAsync().GetAwaiter().GetResult();
         }
+
+
 
         static async Task RunAsync()
         {
@@ -29,8 +32,9 @@ namespace WebBotExample
 
             using (IWebDriver driver = new ChromeDriver())
             {
-                driver.Navigate().GoToUrl("https://furkanoruc.com/assets/img/avatar-1.jpg");
 
+                #region image copy
+                driver.Navigate().GoToUrl("https://furkanoruc.com/assets/img/avatar-1.jpg");
                 // Resmi bul ve URL'sini al.
                 IWebElement image = driver.FindElement(By.TagName("img"));
                 string imageUrl = image.GetAttribute("src");
@@ -54,6 +58,7 @@ namespace WebBotExample
                 clipboardThread.SetApartmentState(ApartmentState.STA);
                 clipboardThread.Start();
                 clipboardThread.Join();
+                #endregion
 
 
 
@@ -64,7 +69,7 @@ namespace WebBotExample
 
 
 
-                #region facebook a giriş yap
+                #region log in to facebook
                 driver.Navigate().GoToUrl("https://www.facebook.com/");
 
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
@@ -72,8 +77,8 @@ namespace WebBotExample
                 IWebElement emailInputElement = WaitUntilElementVisible(driver, By.Id("email"), 20);
                 IWebElement passwordInputElement = WaitUntilElementVisible(driver, By.Id("pass"), 20);
 
-                emailInputElement.SendKeys("05379271688"); // Bu bilgileri gizlemeyi düşünün.
-                passwordInputElement.SendKeys("CogSgdXUJ3y47sa"); // Bu bilgileri gizlemeyi düşünün.
+                emailInputElement.SendKeys("facebook Email or Phone Number");
+                passwordInputElement.SendKeys("facebook Password");
 
                 IWebElement formElement = WaitUntilElementVisible(driver, By.CssSelector("form._9vtf"), 20);
                 formElement.Submit();
@@ -104,22 +109,11 @@ namespace WebBotExample
 
 
 
-                textElement.SendKeys("Furkan Oruç yeni deneme");
-
+                textElement.SendKeys("hello world");
                 textElement.SendKeys(Keys.Control + "v");
-
-
-
-
-
-
-
+                System.Threading.Thread.Sleep(5000);
                 js.ExecuteScript("document.querySelector('form.x1ed109x .x9f619.x1n2onr6.x1ja2u2z.x78zum5.xdt5ytf.x2lah0s.x193iq5w.xeuugli.xsyo7zv.x16hj40l.x10b6aqq.x1yrsyyn:nth-child(2) .x1ey2m1c').click()");
-
-
-
-
-                System.Threading.Thread.Sleep(11115000);
+                System.Threading.Thread.Sleep(5000);
                 driver.Quit();
             }
         }
