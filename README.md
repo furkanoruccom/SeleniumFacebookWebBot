@@ -1,4 +1,3 @@
-## Live Demo
 powered by [Furkan Oruç](https://furkanoruc.com/)
 
 # Web Bot Example
